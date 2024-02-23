@@ -1,0 +1,194 @@
+{ "compressionlevel":-1,
+ "height":20,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[71, 71, 71, 71, 71, 71, 71, 65, 65, 71, 71, 71, 38, 38, 38, 38, 38, 71, 71, 71,
+            71, 71, 71, 71, 71, 71, 65, 71, 38, 38, 67, 38, 38, 38, 38, 38, 38, 65, 65, 71,
+            71, 71, 68, 71, 71, 65, 71, 38, 38, 10, 35, 35, 35, 35, 35, 12, 70, 38, 65, 71,
+            65, 65, 71, 71, 71, 65, 65, 38, 38, 21, 1, 63, 4, 3, 5, 17, 38, 38, 68, 71,
+            71, 71, 65, 65, 65, 71, 71, 38, 38, 21, 9, 38, 38, 38, 21, 17, 38, 38, 65, 71,
+            38, 38, 68, 38, 38, 38, 38, 38, 38, 13, 17, 38, 38, 38, 21, 17, 38, 38, 65, 65,
+            38, 67, 38, 38, 38, 38, 38, 38, 38, 21, 25, 38, 65, 38, 21, 17, 38, 38, 65, 65,
+            34, 34, 34, 34, 34, 34, 12, 38, 38, 13, 17, 38, 68, 38, 21, 17, 38, 38, 71, 65,
+            2, 2, 2, 2, 2, 5, 25, 38, 38, 29, 25, 38, 65, 38, 21, 17, 38, 38, 71, 65,
+            38, 38, 38, 38, 38, 13, 9, 38, 38, 21, 25, 38, 38, 38, 21, 17, 38, 38, 71, 65,
+            71, 38, 38, 38, 38, 13, 9, 38, 38, 29, 25, 38, 38, 38, 21, 17, 38, 38, 71, 65,
+            71, 38, 38, 38, 38, 21, 33, 35, 35, 37, 25, 38, 38, 38, 21, 17, 38, 38, 71, 65,
+            71, 71, 71, 38, 38, 26, 3, 3, 3, 3, 28, 38, 38, 38, 21, 17, 38, 38, 71, 65,
+            71, 71, 71, 38, 38, 38, 38, 38, 38, 69, 38, 38, 38, 38, 21, 17, 38, 38, 71, 65,
+            65, 71, 71, 71, 71, 65, 65, 65, 38, 38, 38, 38, 38, 38, 21, 17, 38, 71, 71, 65,
+            68, 65, 65, 65, 71, 71, 71, 65, 65, 65, 65, 65, 38, 38, 21, 17, 38, 38, 65, 65,
+            68, 68, 65, 65, 65, 65, 71, 71, 71, 71, 68, 65, 38, 38, 21, 33, 35, 36, 34, 66,
+            68, 68, 68, 68, 68, 68, 65, 71, 71, 71, 71, 38, 38, 38, 26, 4, 4, 2, 2, 66,
+            68, 68, 68, 68, 68, 65, 65, 65, 71, 71, 71, 71, 38, 38, 38, 38, 38, 68, 65, 65,
+            68, 68, 68, 68, 68, 68, 65, 65, 65, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71],
+         "height":20,
+         "id":1,
+         "name":"level",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":20,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":2,
+         "name":"waypoints",
+         "objects":[
+                {
+                 "height":0,
+                 "id":1,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":-3,
+                         "y":255
+                        }, 
+                        {
+                         "x":192,
+                         "y":255
+                        }, 
+                        {
+                         "x":192,
+                         "y":384
+                        }, 
+                        {
+                         "x":320,
+                         "y":384
+                        }, 
+                        {
+                         "x":320,
+                         "y":96
+                        }, 
+                        {
+                         "x":480,
+                         "y":96
+                        }, 
+                        {
+                         "x":480,
+                         "y":544
+                        }, 
+                        {
+                         "x":613,
+                         "y":544
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":-2.5,
+                 "y":256
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":3,
+ "nextobjectid":2,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"C:\/Users\/Ev\/Desktop\/New folder\/1 Tiles\/FieldsTileset.tsx"
+        }, 
+        {
+         "firstgid":65,
+         "source":"C:\/Users\/Ev\/Desktop\/New folder\/kust1.tsx"
+        }, 
+        {
+         "columns":1,
+         "firstgid":66,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/8 Camp\/3.png",
+         "imageheight":34,
+         "imagewidth":53,
+         "margin":0,
+         "name":"3",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":34,
+         "tilewidth":53,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":67,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/3 Pointer\/4.png",
+         "imageheight":36,
+         "imagewidth":24,
+         "margin":0,
+         "name":"4",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":36,
+         "tilewidth":24,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":68,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/4 Stone\/11.png",
+         "imageheight":30,
+         "imagewidth":35,
+         "margin":0,
+         "name":"11",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":30,
+         "tilewidth":35,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":69,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/3 Pointer\/3.png",
+         "imageheight":36,
+         "imagewidth":16,
+         "margin":0,
+         "name":"3",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":36,
+         "tilewidth":16,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":70,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/3 Pointer\/2.png",
+         "imageheight":35,
+         "imagewidth":14,
+         "margin":0,
+         "name":"2",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":35,
+         "tilewidth":14,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":71,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/1 Shadow\/3.png",
+         "imageheight":26,
+         "imagewidth":30,
+         "margin":0,
+         "name":"3",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":26,
+         "tilewidth":30,
+         "transparentcolor":"#a6b04f"
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20
+}

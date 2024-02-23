@@ -4,7 +4,7 @@ import random
 import parameters as par
 
 
-class Level():
+class Level:
     def __init__(self, data, map_image):
         self.res = []
         with open('data/spawner.csv', encoding='utf-8') as file:
@@ -27,7 +27,7 @@ class Level():
 
     def data_info(self):
         for layer in self.level_data["layers"]:
-            if layer["name"] == "level1":
+            if layer["name"] == "level":
                 self.tile_map = layer["data"]
             if layer["name"] == "waypoints":
                 for obj in layer["objects"]:

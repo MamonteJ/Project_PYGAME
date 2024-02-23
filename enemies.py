@@ -27,6 +27,7 @@ class Enemy(pygame.sprite.Sprite):
         self.angle = 90
         self.cooldown = 10
         self.last_shot = pygame.time.get_ticks()
+        self.type = type_enemy
 
         self.sprite_sheet = sprites_enemies.get(type_enemy)
         self.frames = self.cut_sheet()
@@ -93,3 +94,7 @@ class Enemy(pygame.sprite.Sprite):
             world.killed_enemies += 1
             world.money += self.money
             self.kill()
+            if self.type == 'wolf':
+                pygame.mixer.Sound('data/sounds/death_wolf.mp3').play()
+            elif self.type == 'bleb':
+                pygame.mixer.Sound('data/sounds/death_bleb.mp3').play()

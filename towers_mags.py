@@ -12,7 +12,7 @@ class Tower(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         self.results = []
-        with open('data/towers_stats.csv', encoding='utf-8') as file:
+        with open('data/stats_mags.csv', encoding='utf-8') as file:
             fieldnames = ['range', 'cooldown', 'damage']
             file_reader = csv.DictReader(file, fieldnames=fieldnames)
             for row in file_reader:
@@ -32,9 +32,8 @@ class Tower(pygame.sprite.Sprite):
         self.y = (self.pos_y + 0.5) * siz.TILE_SIZE
 
         self.sprite_sheets = sprites_tower
-        print(sprites_tower)
         self.frames = self.cut_sheet(self.sprite_sheets[self.level - 1])
-        self.frame_index = 5
+        self.frame_index = 0
         self.update_time = pygame.time.get_ticks()
 
         self.image = self.frames[self.frame_index]
@@ -77,6 +76,7 @@ class Tower(pygame.sprite.Sprite):
                     else:
                         self.flip = False
                     self.target.health -= self.damage
+                    pygame.mixer.Sound('data/sounds/mag_udar.mp3').play()
                     break
 
     def animation(self):
@@ -91,6 +91,7 @@ class Tower(pygame.sprite.Sprite):
                 self.target = None
 
     def upgrade(self):
+        pygame.mixer.Sound('data/sounds/sound_level_up.mp3').play()
         self.level += 1
         self.cooldown = int(self.results[self.level].get('cooldown'))
         self.renge = int(self.results[self.level].get('range'))
