@@ -10,8 +10,6 @@ price_update_ar = 35
 price_update_mag = 45
 
 health = 10
-money = 1000
+money = 100
 wave_money = 25
-wave = 1
-
-levels = 2
+wave = 5

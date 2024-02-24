@@ -12,7 +12,7 @@ class Tower(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         self.results = []
-        with open('data/stats_mags.csv', encoding='utf-8') as file:
+        with open('data/csv_files/stats_mags.csv', encoding='utf-8') as file:
             fieldnames = ['range', 'cooldown', 'damage']
             file_reader = csv.DictReader(file, fieldnames=fieldnames)
             for row in file_reader:

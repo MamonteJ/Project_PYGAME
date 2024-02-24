@@ -1,0 +1,240 @@
+{ "compressionlevel":-1,
+ "height":20,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[66, 38, 21, 25, 38, 38, 66, 66, 66, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65,
+            66, 38, 21, 25, 38, 38, 43, 38, 38, 66, 66, 66, 66, 65, 65, 65, 65, 65, 65, 65,
+            66, 38, 21, 11, 38, 38, 38, 38, 38, 38, 38, 66, 74, 66, 66, 66, 66, 65, 65, 65,
+            66, 38, 26, 11, 11, 38, 38, 38, 38, 67, 73, 38, 38, 38, 38, 38, 68, 66, 65, 65,
+            66, 38, 38, 26, 5, 11, 38, 38, 38, 38, 38, 38, 38, 38, 38, 47, 38, 38, 66, 65,
+            66, 68, 38, 38, 26, 11, 11, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 66, 65,
+            65, 66, 38, 38, 38, 26, 11, 11, 35, 35, 35, 35, 35, 35, 12, 38, 38, 38, 66, 65,
+            65, 66, 38, 38, 38, 38, 26, 3, 3, 3, 3, 3, 3, 5, 17, 38, 38, 38, 66, 65,
+            65, 66, 73, 38, 47, 38, 38, 38, 38, 38, 38, 38, 38, 21, 17, 38, 38, 38, 66, 65,
+            65, 66, 65, 67, 38, 38, 38, 38, 38, 38, 38, 38, 38, 21, 17, 38, 38, 68, 66, 65,
+            65, 66, 66, 74, 66, 38, 38, 38, 47, 38, 38, 10, 35, 37, 28, 38, 38, 38, 66, 65,
+            65, 66, 69, 65, 72, 67, 38, 38, 38, 38, 10, 11, 11, 28, 38, 38, 38, 38, 66, 65,
+            65, 65, 66, 66, 67, 38, 38, 38, 38, 10, 11, 11, 28, 38, 38, 38, 38, 43, 66, 65,
+            65, 65, 66, 68, 38, 38, 47, 38, 38, 21, 11, 28, 38, 38, 38, 38, 67, 74, 66, 65,
+            65, 65, 65, 66, 38, 38, 38, 38, 38, 21, 17, 38, 38, 38, 38, 38, 66, 73, 66, 65,
+            65, 65, 65, 65, 73, 38, 38, 38, 38, 26, 11, 12, 38, 38, 67, 38, 38, 66, 66, 65,
+            65, 65, 65, 65, 66, 68, 38, 43, 38, 38, 26, 11, 12, 38, 38, 38, 38, 66, 65, 65,
+            65, 65, 65, 65, 65, 66, 38, 38, 38, 38, 38, 26, 11, 12, 38, 38, 47, 66, 65, 65,
+            65, 65, 65, 65, 65, 65, 66, 67, 73, 38, 38, 38, 11, 17, 38, 38, 66, 65, 65, 65,
+            65, 65, 65, 65, 65, 65, 65, 66, 66, 69, 38, 38, 70, 70, 70, 38, 66, 65, 65, 65],
+         "height":20,
+         "id":1,
+         "name":"level",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":20,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":2,
+         "name":"waypoints",
+         "objects":[
+                {
+                 "height":0,
+                 "id":2,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":96,
+                         "y":-9
+                        }, 
+                        {
+                         "x":96,
+                         "y":96
+                        }, 
+                        {
+                         "x":224,
+                         "y":224
+                        }, 
+                        {
+                         "x":448,
+                         "y":224
+                        }, 
+                        {
+                         "x":448,
+                         "y":320
+                        }, 
+                        {
+                         "x":320,
+                         "y":416
+                        }, 
+                        {
+                         "x":320,
+                         "y":480
+                        }, 
+                        {
+                         "x":416,
+                         "y":576
+                        }, 
+                        {
+                         "x":416,
+                         "y":608
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":96,
+                 "y":-8.5
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":3,
+ "nextobjectid":4,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"C:\/Users\/Ev\/Desktop\/New folder\/1 Tiles\/FieldsTileset.tsx"
+        }, 
+        {
+         "columns":1,
+         "firstgid":65,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/1 Shadow\/4.png",
+         "imageheight":37,
+         "imagewidth":44,
+         "margin":0,
+         "name":"4",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":37,
+         "tilewidth":44,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":66,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/1 Shadow\/3.png",
+         "imageheight":26,
+         "imagewidth":30,
+         "margin":0,
+         "name":"3",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":26,
+         "tilewidth":30,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":67,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/4 Stone\/6.png",
+         "imageheight":8,
+         "imagewidth":12,
+         "margin":0,
+         "name":"6",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":8,
+         "tilewidth":12,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":68,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/4 Stone\/9.png",
+         "imageheight":16,
+         "imagewidth":19,
+         "margin":0,
+         "name":"9",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":16,
+         "tilewidth":19,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":69,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/4 Stone\/15.png",
+         "imageheight":20,
+         "imagewidth":21,
+         "margin":0,
+         "name":"15",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":20,
+         "tilewidth":21,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":70,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/8 Camp\/2.png",
+         "imageheight":51,
+         "imagewidth":36,
+         "margin":0,
+         "name":"2",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":51,
+         "tilewidth":36,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":71,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/8 Camp\/1.png",
+         "imageheight":36,
+         "imagewidth":57,
+         "margin":0,
+         "name":"1",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":36,
+         "tilewidth":57,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "columns":1,
+         "firstgid":72,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/8 Camp\/6.png",
+         "imageheight":13,
+         "imagewidth":22,
+         "margin":0,
+         "name":"6",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":13,
+         "tilewidth":22,
+         "transparentcolor":"#a6b04f"
+        }, 
+        {
+         "firstgid":73,
+         "source":"C:\/Users\/Ev\/Desktop\/New folder\/kust1.tsx"
+        }, 
+        {
+         "columns":1,
+         "firstgid":74,
+         "image":"C:\/Users\/Ev\/Desktop\/New folder\/2 Objects\/9 Bush\/2.png",
+         "imageheight":26,
+         "imagewidth":37,
+         "margin":0,
+         "name":"2",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":26,
+         "tilewidth":37,
+         "transparentcolor":"#a6b04f"
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20
+}

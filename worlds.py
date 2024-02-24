@@ -5,9 +5,9 @@ import parameters as par
 
 
 class Level:
-    def __init__(self, data, map_image):
+    def __init__(self, data, map_image, lvl):
         self.res = []
-        with open('data/spawner.csv', encoding='utf-8') as file:
+        with open(f'data/csv_files/spawner{lvl}.csv', encoding='utf-8') as file:
             fieldnames = ['bleb', 'wolf']
             file_reader = csv.DictReader(file, fieldnames=fieldnames)
             for row in file_reader:

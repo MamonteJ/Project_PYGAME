@@ -12,7 +12,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self, type_enemy, waypoints, sprites_enemies):
         pygame.sprite.Sprite.__init__(self)
         self.res = {}
-        with open('data/enemies_stats.csv', encoding='utf-8') as file:
+        with open('data/csv_files/enemies_stats.csv', encoding='utf-8') as file:
             file_reader = csv.reader(file)
             for row in file_reader:
                 sl_stats = {row[0]: {'health': row[1], 'speed': row[2], 'money': row[3]}}
