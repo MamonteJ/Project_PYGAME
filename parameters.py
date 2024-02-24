@@ -1,5 +1,3 @@
-import csv
-
 ROWS = 20
 COLS = 20
 TILE_SIZE = 32
@@ -14,4 +12,6 @@ price_update_mag = 45
 health = 10
 money = 1000
 wave_money = 25
-wave = 5
+wave = 1
+
+levels = 2

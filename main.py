@@ -8,13 +8,15 @@ from worlds import Level
 from towers_arrow import Tower as Arrow
 from towers_mags import Tower as Mag
 from panel import Button
+import menu
+from menu import levels_menu
 
 pygame.init()
 WEIGHT, HEIGHT = par.ROWS * par.TILE_SIZE, par.COLS * par.TILE_SIZE
 screen_size = (WEIGHT, HEIGHT + par.LOWER_PANEL)
 screen = pygame.display.set_mode(screen_size)
 pygame.display.set_caption('Tower Defence (JD)')
-FPS = 80
+FPS = 60
 pygame.mixer.music.load('data/sounds/sound_running2.mp3')
 pygame.mixer.music.play(-1)
 
@@ -44,9 +46,11 @@ class SpriteGroup(pygame.sprite.Group):
 
 
 # --------------КАРТА---------------------------------------------------
-with open('data/levels/level_2.txt') as file:
+lvl = menu.levels_menu()
+print(lvl)
+with open(f'data/levels/level_{lvl}.txt') as file:
     world_data = json.load(file)
-Map = load_image('level_2.png')
+Map = load_image(f'level_{lvl}.png')
 world = Level(world_data, Map)
 world.data_info()
 world.enemies_info()
@@ -113,11 +117,11 @@ def spawn_mag(m_pos):
 
     if world.tile_map[m_pos_number] == 38:
         space = True
-        for a_tower in towers_group_arrow:
-            if (m_pos_x, m_pos_y) == (a_tower.pos_x, a_tower.pos_y):
+        for tower_a in towers_group_arrow:
+            if (m_pos_x, m_pos_y) == (tower_a.pos_x, tower_a.pos_y):
                 space = False
-        for m_tower in towers_group_mag:
-            if (m_pos_x, m_pos_y) == (m_tower.pos_x, m_tower.pos_y):
+        for tower_m in towers_group_mag:
+            if (m_pos_x, m_pos_y) == (tower_m.pos_x, tower_m.pos_y):
                 space = False
         if space:
             pygame.mixer.Sound('data/sounds/stand_tower.mp3').play()
@@ -129,24 +133,24 @@ def spawn_mag(m_pos):
 def select_tower(m_pos):
     m_pos_x = m_pos[0] // par.TILE_SIZE
     m_pos_y = m_pos[1] // par.TILE_SIZE
-    for a_tower in towers_group_arrow:
-        if (m_pos_x, m_pos_y) == (a_tower.pos_x, a_tower.pos_y):
-            return a_tower
+    for tower_a in towers_group_arrow:
+        if (m_pos_x, m_pos_y) == (tower_a.pos_x, tower_a.pos_y):
+            return tower_a
 
 
 def m_select_tower(m_pos):
     m_pos_x = m_pos[0] // par.TILE_SIZE
     m_pos_y = m_pos[1] // par.TILE_SIZE
-    for m_tower in towers_group_mag:
-        if (m_pos_x, m_pos_y) == (m_tower.pos_x, m_tower.pos_y):
-            return m_tower
+    for tower_m in towers_group_mag:
+        if (m_pos_x, m_pos_y) == (tower_m.pos_x, tower_m.pos_y):
+            return tower_m
 
 
 def cancel_selected():
-    for a_tower in towers_group_arrow:
-        for m_tower in towers_group_mag:
-            a_tower.selected = False
-            m_tower.selected = False
+    for tower_a in towers_group_arrow:
+        tower_a.selected = False
+    for tower_m in towers_group_mag:
+        tower_m.selected = False
 
 
 # ----------------------------------------------------------------------
@@ -241,10 +245,14 @@ while running:
         if world.health <= 0:
             game_over = True
             game_outcome = -1
+            pygame.mixer.music.load('data/sounds/defeat.mp3')
+            pygame.mixer.music.play()
         if world.level >= par.wave + 1:
             game_over = True
             game_outcome = 1
             world.level = par.wave
+            pygame.mixer.music.load('data/sounds/victory.mp3')
+            pygame.mixer.music.play()
         # --- Обновление групп объектов ---
         enemies_group.update(world)
         towers_group_arrow.update(enemies_group)
@@ -388,6 +396,8 @@ while running:
             enemies_group.empty()
             towers_group_arrow.empty()
             towers_group_mag.empty()
+            pygame.mixer.music.load('data/sounds/sound_running2.mp3')
+            pygame.mixer.music.play(-1)
     clock.tick(FPS)
     pygame.display.flip()
 pygame.quit()

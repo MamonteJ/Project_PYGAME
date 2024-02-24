@@ -71,6 +71,7 @@ class Enemy(pygame.sprite.Sprite):
             self.kill()
             world.health -= 1
             world.missing_enemies += 1
+            pygame.mixer.Sound('data/sounds/bonk.mp3').play()
 
         dist = self.movement.length()
         if dist >= self.speed:
@@ -96,5 +97,5 @@ class Enemy(pygame.sprite.Sprite):
             self.kill()
             if self.type == 'wolf':
                 pygame.mixer.Sound('data/sounds/death_wolf.mp3').play()
-            elif self.type == 'bleb':
+            if self.type == 'bleb':
                 pygame.mixer.Sound('data/sounds/death_bleb.mp3').play()
