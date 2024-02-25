@@ -8,6 +8,7 @@ ANIMATION_STEPS = 6
 ANIMATION_DELAY = 100
 
 
+# --- Класс врагов ---
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, type_enemy, waypoints, sprites_enemies):
         pygame.sprite.Sprite.__init__(self)
@@ -38,6 +39,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = self.pos
 
+    # --- Нарезка спрайтов ---
     def cut_sheet(self):
         size = self.sprite_sheet.get_height()
         frames = []
@@ -46,6 +48,7 @@ class Enemy(pygame.sprite.Sprite):
             frames.append(temp_img)
         return frames
 
+    # --- Обновление врагов ---
     def update(self, world):
         self.move(world)
         self.rotate()
@@ -53,6 +56,7 @@ class Enemy(pygame.sprite.Sprite):
         if pygame.time.get_ticks() - self.last_shot > self.cooldown:
             self.animation()
 
+    # --- Анимации ---
     def animation(self):
         self.image = self.frames[self.frame_index]
 
@@ -63,6 +67,7 @@ class Enemy(pygame.sprite.Sprite):
                 self.frame_index = 0
                 self.last_shot = pygame.time.get_ticks()
 
+    # --- Перемещение, нанесение урона игроку ---
     def move(self, world):
         if self.target_waypoint < len(self.waypoints):
             self.target = Vector2(self.waypoints[self.target_waypoint])
@@ -90,6 +95,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = self.pos
 
+    # --- Смерть врагов ---
     def enemy_alive(self, world):
         if self.health <= 0:
             world.killed_enemies += 1
@@ -99,3 +105,5 @@ class Enemy(pygame.sprite.Sprite):
                 pygame.mixer.Sound('data/sounds/death_wolf.mp3').play()
             if self.type == 'bleb':
                 pygame.mixer.Sound('data/sounds/death_bleb.mp3').play()
+            if self.type == 'ork':
+                pygame.mixer.Sound('data/sounds/death_ork.mp3').play()

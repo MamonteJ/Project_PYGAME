@@ -46,7 +46,8 @@ def main(lvl):
     # -------------ВРАГИ----------------------------------------------------
     sprites_enemies = {
         'bleb': load_image('D_Walk2.png'),
-        'wolf': load_image('D_Walk.png')
+        'wolf': load_image('D_Walk.png'),
+        'ork': load_image('D_Walk_ork.png')
     }
     enemies_group = SpriteGroup()
     enemy_spawn = pygame.time.get_ticks()
@@ -357,11 +358,11 @@ def main(lvl):
             # --- Поражение, рестарт игры ---
             pygame.draw.rect(screen, 'cornsilk', (100, 240, 450, 240), border_radius=60)
             if game_outcome == -1:
-                draw_text('GG, EZ MID, JNG DIF',
-                          pygame.font.SysFont('Copyright', 60), 'black', 125, 300)
+                draw_text('ПОРАЖЕНИЕ...(',
+                          pygame.font.SysFont('Copyright', 60), 'black', 175, 300)
             elif game_outcome == 1:
-                draw_text('ЭТО ПОБЕДА EZ MID',
-                          pygame.font.SysFont('Copyright', 60), 'black', 110, 300)
+                draw_text('ЭТО ПОБЕДА!',
+                          pygame.font.SysFont('Copyright', 60), 'black', 180, 300)
             # --- Сброс уровня ---
             if restart_button.draw(screen):
                 game_over = False
@@ -417,8 +418,10 @@ sound_click = 'data/sounds/click_button.mp3'
 # ======================================================================================================================
 # --- Главное меню -----------------------------------------------------------------------------------------------------
 def main_menu():
-    start_button = Button(WEIGHT / 2.5 - 5, HEIGHT / 2, button, True, 'Играть', sound_click, button_hover)
-    exit_button = Button(WEIGHT / 2.5 - 5, (HEIGHT / 2) + 150, button, True, 'Выйти', sound_click, button_hover)
+    start_button = Button(WEIGHT / 2.5 - 5, HEIGHT / 2 + 100, button, True,
+                          'Играть', sound_click, button_hover)
+    exit_button = Button(WEIGHT / 2.5 - 5, HEIGHT + 50, button, True,
+                         'Выйти', sound_click, button_hover)
     running = True
     while running:
         for event in pygame.event.get():
@@ -449,8 +452,8 @@ def levels_menu():
                      True, '1', sound_click, button_mini_hover)
     level_2 = Button(WEIGHT / 2 - 30, 210, button_mini,
                      True, '2', sound_click, button_mini_hover)
-    # level_3 = Button(WEIGHT / 2 - 30, 310, button_mini,
-    #                  True, '3', sound_click, button_mini_hover)
+    level_3 = Button(WEIGHT / 2 - 30, 310, button_mini,
+                     True, '3', sound_click, button_mini_hover)
     # level_4 = Button(WEIGHT / 2 - 30, 410, button_mini,
     #                  True, '4', sound_click, button_mini_hover)
     # level_5 = Button(WEIGHT / 2 - 30, 510, button_mini,
@@ -470,7 +473,9 @@ def levels_menu():
         if level_2.draw(screen):
             lvl = 2
             main(lvl)
-        # level_3.draw(screen)
+        if level_3.draw(screen):
+            lvl = 3
+            main(lvl)
         # level_4.draw(screen)
         # level_5.draw(screen)
         if exit_button.draw(screen):
@@ -479,6 +484,10 @@ def levels_menu():
     pygame.quit()
     sys.exit()
 
+
+# --- Иконка приложения ---
+icon = load_image('icon.png')
+pygame.display.set_icon(icon)
 
 # -- Запуск ---
 if __name__ == '__main__':

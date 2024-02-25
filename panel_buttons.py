@@ -1,6 +1,7 @@
 import pygame
 
 
+# --- Класс кнопок ---
 class Button:
     def __init__(self, x, y, image, click, text=None, sound=None, image_hover=None):
         self.image = image
@@ -18,6 +19,7 @@ class Button:
             self.image_hover = image_hover
         self.hovered = False
 
+    # --- Отрисовка кнопок ---
     def draw(self, surface):
         action = False
         pos = pygame.mouse.get_pos()

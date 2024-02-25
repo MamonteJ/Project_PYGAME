@@ -7,6 +7,7 @@ ANIMATION_STEPS = 6
 ANIMATION_DELAY = 100
 
 
+# --- Класс лучников ---
 class Tower(pygame.sprite.Sprite):
     def __init__(self, sprites_tower, pos_x, pos_y):
         pygame.sprite.Sprite.__init__(self)
@@ -48,6 +49,7 @@ class Tower(pygame.sprite.Sprite):
         self.renge_rect = self.renge_area.get_rect()
         self.renge_rect.center = self.rect.center
 
+    # --- Нарезка спрайтов ---
     def cut_sheet(self, sprite_sheet):
         size = sprite_sheet.get_height()
         frames = []
@@ -56,6 +58,7 @@ class Tower(pygame.sprite.Sprite):
             frames.append(temp_img)
         return frames
 
+    # --- Обновление лучников ---
     def update(self, enemies_group):
         if self.target:
             self.animation()
@@ -63,6 +66,7 @@ class Tower(pygame.sprite.Sprite):
             if pygame.time.get_ticks() - self.last_shot > self.cooldown:
                 self.pick_target(enemies_group)
 
+    # --- Атака врагов ---
     def pick_target(self, enemies_group):
         for enemy in enemies_group:
             if enemy.health > 0:
@@ -79,6 +83,7 @@ class Tower(pygame.sprite.Sprite):
                     pygame.mixer.Sound('data/sounds/strelba1.mp3').play()
                     break
 
+    # --- Анимация ---
     def animation(self):
         self.image = self.frames[self.frame_index]
 
@@ -90,6 +95,7 @@ class Tower(pygame.sprite.Sprite):
                 self.last_shot = pygame.time.get_ticks()
                 self.target = None
 
+    # --- Улучшение лучников ---
     def upgrade(self):
         pygame.mixer.Sound('data/sounds/sound_level_up.mp3').play()
         self.level += 1
@@ -107,6 +113,7 @@ class Tower(pygame.sprite.Sprite):
         self.renge_rect = self.renge_area.get_rect()
         self.renge_rect.center = self.rect.center
 
+    # --- Отрисовка лучников ---
     def draw(self, surface):
         image_flip = pygame.transform.flip(self.image, self.flip, False)
         surface.blit(image_flip, self.rect)
